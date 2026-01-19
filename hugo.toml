@@ -2,3 +2,6 @@ baseURL = 'https://learnahk.com/'
 languageCode = 'en-us'
 title = 'Learn AHK'
 theme = "paper"
+
+[params]
+  customCSS = ["css/custom.css"]
