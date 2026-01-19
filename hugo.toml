@@ -4,4 +4,4 @@ title = 'Learn AHK'
 theme = "paper"
 
 [params]
-  customCSS = ["css/custom.css"]
+  color = 'gray'
