@@ -1,6 +1,6 @@
 +++
 date = '2026-01-19T18:33:00+05:00'
-draft = false
+draft = true
 title = 'Classes in AHK'
 +++
 # AHK Classes
@@ -41,7 +41,7 @@ Once we have these attributes set, we can create an instance. Let's call our pri
 
 ```
 ### Dot Notation For Attributes
-To get to the attribute values that are in the class instance, we use what's called "dot notation" to 'drill down' into an attribute. It's written in the form _object.attribute_. We can put our old friend msg box in front of it to show the value: 
+To get to the attribute values that are in the class instance, we use what's called "dot notation" to 'drill down' into an attribute. It's written in the form _object.attribute_. We can put our old friend msgbox in front of it to show the value: 
 ```python
 
 	msgbox inky.power
