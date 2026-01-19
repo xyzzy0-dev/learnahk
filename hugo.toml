@@ -4,4 +4,5 @@ title = 'Learn AHK'
 theme = "paper"
 
 [params]
-  color = 'gray'
+  color = 'light'
+  monoDarkIcon = true
