@@ -3,7 +3,6 @@ date = '2026-01-19T11:09:18+05:00'
 draft = false
 title = 'A code snippet'
 +++
-# A code snippet!
 ## Hello headline
 This is just the text. This is just the text. This is just the text. This is just the text. This is just the text. This is just the text. This is just the text. This is just the text. This is just the text. This is just the text. This is just the text. 
 
