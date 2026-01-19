@@ -1,8 +1,0 @@
-baseURL = 'https://learnahk.com/'
-languageCode = 'en-us'
-title = 'Learn AHK'
-theme = "paper"
-
-[params]
-  color = 'light'
-  monoDarkIcon = true
