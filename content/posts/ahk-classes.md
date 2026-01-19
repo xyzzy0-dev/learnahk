@@ -1,3 +1,8 @@
++++
+date = '2026-01-19T18:33:00+05:00'
+draft = fa;se
+title = 'Classes in AHK'
++++
 # AHK Classes
 Classes in AutoHotkey 2 provide a way to organize variables and functions in your code. They do this by creating new types of structures, known as class objects, that let you store information and functionality in one place. 
 
