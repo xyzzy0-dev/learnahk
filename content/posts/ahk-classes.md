@@ -1,5 +1,5 @@
 +++
-date = '2026-01-19T18:33:00+05:00'
+date = '2026-08-26T18:33:00+05:00'
 draft = true
 title = 'Classes in AHK'
 +++
