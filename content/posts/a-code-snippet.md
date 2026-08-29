@@ -6,7 +6,7 @@ title = 'A code snippet'
 ## Hello headline
 This is just the text. This is just the text. This is just the text. This is just the text. This is just the text. This is just the text. This is just the text. This is just the text. This is just the text. This is just the text. This is just the text. 
 
-```autohotkey
+```text
 	PrintArray(){
 		for i, x in y {
 			s .= x "`n"
