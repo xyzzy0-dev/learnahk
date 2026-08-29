@@ -48,7 +48,6 @@
   ],
   "frontMatter.framework.id": "hugo",
   "frontMatter.git.enabled": true,
-  "frontMatter.git.commitMessage": "Post: {{title}}",
   "frontMatter.content.publicFolder": "static",
   "frontMatter.preview.host": "http://localhost:1313",
   "frontMatter.content.pageFolders": [
