@@ -16,14 +16,14 @@ Let's look at a simple example: an inkjet printer. Printers are real objects tha
 
 To start, we name our printer class using the keyword 'class' and giving the class a name, 'InkJetPrinter'. 
 
-```autohotkey
+```Javascript
 	class InkJetPrinter {
 	
 	}
 ```
 
 There it is, our new class. But it's empty and won't be very useful as a blueprint if we don't give it more life. Let's give it some attribues (internal variables) so that it is useful. To do this, we need to set the value of these attributes. Let's start like this, which is intuitive:
-```python
+```Javascript
 
 	class InkJetPrinter {
 	    power := "ON"
