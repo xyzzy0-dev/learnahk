@@ -1,6 +1,6 @@
 +++
 date = '2026-08-26T18:33:00+05:00'
-draft = true
+draft = false
 title = 'Classes in AHK'
 +++
 # AHK Classes
