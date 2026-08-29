@@ -8,6 +8,7 @@ This is just the text. This is just the text. This is just the text. This is jus
 
 ```text
 PrintArray(y){
+	s := ""
 	for i, x in y {
 		s .= x "`n"
 	}
