@@ -10,7 +10,7 @@ This is just the text. This is just the text. This is just the text. This is jus
 PrintArray(y){
 	s := ""
 	for i, x in y {
-		s .= x "`n"
+		s .= "index " i ": " x "`n"
 	}
 	Msgbox(s)
 }
