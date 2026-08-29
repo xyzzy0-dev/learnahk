@@ -1,0 +1,931 @@
+<!doctype html>
+<html
+  lang="en"
+  dir="ltr"
+  class="scroll-smooth"
+  data-default-appearance="light"
+  data-auto-appearance="true"><head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <meta charset="utf-8">
+  
+    <meta http-equiv="content-language" content="en">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="theme-color">
+
+  
+  
+    <title>Classes in AHK &middot; Learn AHK</title>
+    <meta name="title" content="Classes in AHK &middot; Learn AHK">
+  
+
+  
+  
+  
+  
+  
+  <link rel="canonical" href="//localhost:1313/posts/ahk-classes/">
+  
+
+  
+  
+  
+
+  
+  <meta property="og:url" content="//localhost:1313/posts/ahk-classes/">
+	<meta property="og:site_name" content="Learn AHK">
+	<meta property="og:title" content="Classes in AHK">
+	<meta property="og:locale" content="en">
+	<meta property="og:type" content="article">
+		<meta property="article:section" content="posts">
+		<meta property="article:published_time" content="2026-08-26T18:33:00+05:00">
+		<meta property="article:modified_time" content="2026-08-26T18:33:00+05:00">
+
+  
+	<meta name="twitter:card" content="summary">
+	<meta name="twitter:title" content="Classes in AHK">
+
+  
+  
+  
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+  
+    
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+  
+  
+  
+  
+  
+  
+    
+  
+  
+    
+  
+  
+  <link
+    type="text/css"
+    rel="stylesheet"
+    href="/css/main.bundle.min.8c32a1cf928bd77116818427b381ff59d56aedcfeaff148b4204a2ef92bfd0c8eabadd868c43997926a9f4ba0d14e98e7e35363e0c34acbd767c5b291123459b.css"
+    integrity="sha512-jDKhz5KL13EWgYQns4H/WdVq7c/q/xSLQgSi75K/0Mjqut2GjEOZeSap9LoNFOmOfjU2Pgw0rL12fFspESNFmw==">
+
+  
+  
+  <script
+    type="text/javascript"
+    src="/js/appearance.min.6f41174b3a05b680820fe08cadbfa5fb7a7ca347b76a0955cdc68b9d8aca1ce24f0547e138cea33bcc7904d551a90afcb1cc7f2d9fe8557075d501419046c08c.js"
+    integrity="sha512-b0EXSzoFtoCCD&#43;CMrb&#43;l&#43;3p8o0e3aglVzcaLnYrKHOJPBUfhOM6jO8x5BNVRqQr8scx/LZ/oVXB11QFBkEbAjA=="></script>
+  
+  
+  
+  
+  
+  
+    
+    <script src="/lib/zoom/zoom.min.umd.a527109b68c082a70f3697716dd72a9d5aa8b545cf800cecbbc7399f2ca6f6e0ce3e431f2062b48bbfa47c9ea42822714060bef309be073f49b9c0e30d318d7b.js" integrity="sha512-pScQm2jAgqcPNpdxbdcqnVqotUXPgAzsu8c5nyym9uDOPkMfIGK0i7&#43;kfJ6kKCJxQGC&#43;8wm&#43;Bz9JucDjDTGNew=="></script>
+  
+
+  
+  
+  
+    
+  
+  
+    
+  
+  
+  
+  
+  
+  
+  
+    
+    <script
+      defer
+      type="text/javascript"
+      id="script-bundle"
+      src="/js/main.bundle.min.67624a357c928d29b9fe19ba01a1e32c05ad1329ca2a712bf10446df0c6872903d0c14b21f76896b57a5a0710940805416cee38851d9067db6555881188e35a5.js"
+      integrity="sha512-Z2JKNXySjSm5/hm6AaHjLAWtEynKKnEr8QRG3wxocpA9DBSyH3aJa1eloHEJQIBUFs7jiFHZBn22VViBGI41pQ=="
+      data-copy="Copy"
+      data-copied="Copied"></script>
+  
+
+  
+  
+
+<script src="/lib/jquery/jquery.slim.min.b0dca576e87d7eaa5850ae4e61759c065786cdb6489d68fcc82240539eebd5da522bdb4fda085ffd245808c8fe2acb2516408eb774ef26b5f6015fc6737c0ea8.js" integrity="sha512-sNylduh9fqpYUK5OYXWcBleGzbZInWj8yCJAU57r1dpSK9tP2ghf/SRYCMj&#43;KsslFkCOt3TvJrX2AV/Gc3wOqA=="></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+
+
+
+
+
+
+  
+  
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+  
+
+  
+  <script type="application/ld+json">
+  [{
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "articleSection": "Posts",
+    "name": "Classes in AHK",
+    "headline": "Classes in AHK",
+    
+    "inLanguage": "en",
+    "url" : "//localhost:1313/posts/ahk-classes/",
+    "author" : {
+      "@type": "Person",
+      "name": ""
+    },
+    "copyrightYear": "2026",
+    "dateCreated": "2026-08-26T18:33:00\u002b05:00",
+    "datePublished": "2026-08-26T18:33:00\u002b05:00",
+    
+    "dateModified": "2026-08-26T18:33:00\u002b05:00",
+    
+    
+    
+    "mainEntityOfPage": "true",
+    "wordCount": "1738"
+  }]
+  </script>
+
+
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+</head>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  <body class="flex flex-col h-screen m-auto leading-7 max-w-7xl px-6 sm:px-14 md:px-24 lg:px-32 text-lg bg-neutral text-neutral-900 dark:bg-neutral-800 dark:text-neutral bf-scrollbar">
+    <div id="the-top" class="absolute flex self-center">
+      <a
+        class="px-3 py-1 text-sm -translate-y-8 rounded-b-lg bg-primary-200 focus:translate-y-0 dark:bg-neutral-600"
+        href="#main-content">
+        <span class="font-bold text-primary-600 pe-2 dark:text-primary-400">&darr;</span>
+        Skip to main content
+      </a>
+    </div>
+    
+    
+      <div class="main-menu flex items-center w-full gap-2 p-1 pl-0">
+  
+  
+    <a href="/" class="text-base font-medium truncate min-w-0 shrink">
+      Learn AHK
+    </a>
+  
+  <div class="flex items-center ms-auto">
+    <div class="hidden md:flex">
+      <nav class="flex items-center gap-x-5 h-12">
+  
+
+  
+
+  
+
+  
+    <button
+      id="search-button"
+      aria-label="Search"
+      class="text-base bf-icon-color-hover"
+      title="Search (/)">
+      <span class="relative block icon"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="search" class="svg-inline--fa fa-search fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"/></svg>
+</span>
+    </button>
+  
+
+  
+    <div class="flex items-center">
+      <button
+        id="appearance-switcher"
+        aria-label="Dark mode switcher"
+        type="button"
+        class="text-base bf-icon-color-hover">
+        <div class="flex items-center justify-center dark:hidden">
+          <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M32 256c0-123.8 100.3-224 223.8-224c11.36 0 29.7 1.668 40.9 3.746c9.616 1.777 11.75 14.63 3.279 19.44C245 86.5 211.2 144.6 211.2 207.8c0 109.7 99.71 193 208.3 172.3c9.561-1.805 16.28 9.324 10.11 16.95C387.9 448.6 324.8 480 255.8 480C132.1 480 32 379.6 32 256z"/></svg>
+</span>
+        </div>
+        <div class="items-center justify-center hidden dark:flex">
+          <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M256 159.1c-53.02 0-95.1 42.98-95.1 95.1S202.1 351.1 256 351.1s95.1-42.98 95.1-95.1S309 159.1 256 159.1zM509.3 347L446.1 255.1l63.15-91.01c6.332-9.125 1.104-21.74-9.826-23.72l-109-19.7l-19.7-109c-1.975-10.93-14.59-16.16-23.72-9.824L256 65.89L164.1 2.736c-9.125-6.332-21.74-1.107-23.72 9.824L121.6 121.6L12.56 141.3C1.633 143.2-3.596 155.9 2.736 164.1L65.89 256l-63.15 91.01c-6.332 9.125-1.105 21.74 9.824 23.72l109 19.7l19.7 109c1.975 10.93 14.59 16.16 23.72 9.824L256 446.1l91.01 63.15c9.127 6.334 21.75 1.107 23.72-9.822l19.7-109l109-19.7C510.4 368.8 515.6 356.1 509.3 347zM256 383.1c-70.69 0-127.1-57.31-127.1-127.1c0-70.69 57.31-127.1 127.1-127.1s127.1 57.3 127.1 127.1C383.1 326.7 326.7 383.1 256 383.1z"/></svg>
+</span>
+        </div>
+      </button>
+    </div>
+  
+</nav>
+
+
+
+    </div>
+    <div class="flex md:hidden">
+      <div class="flex items-center h-14 gap-4">
+  
+    <button
+      id="search-button-mobile"
+      aria-label="Search"
+      class="flex items-center justify-center bf-icon-color-hover"
+      title="Search (/)">
+      <span class="relative block icon"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="search" class="svg-inline--fa fa-search fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"/></svg>
+</span>
+    </button>
+  
+
+  
+    <button
+      id="appearance-switcher-mobile"
+      type="button"
+      aria-label="Dark mode switcher"
+      class="flex items-center justify-center text-neutral-900 hover:text-primary-600 dark:text-neutral-200 dark:hover:text-primary-400">
+      <div class="dark:hidden">
+        <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M32 256c0-123.8 100.3-224 223.8-224c11.36 0 29.7 1.668 40.9 3.746c9.616 1.777 11.75 14.63 3.279 19.44C245 86.5 211.2 144.6 211.2 207.8c0 109.7 99.71 193 208.3 172.3c9.561-1.805 16.28 9.324 10.11 16.95C387.9 448.6 324.8 480 255.8 480C132.1 480 32 379.6 32 256z"/></svg>
+</span>
+      </div>
+      <div class="hidden dark:block">
+        <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M256 159.1c-53.02 0-95.1 42.98-95.1 95.1S202.1 351.1 256 351.1s95.1-42.98 95.1-95.1S309 159.1 256 159.1zM509.3 347L446.1 255.1l63.15-91.01c6.332-9.125 1.104-21.74-9.826-23.72l-109-19.7l-19.7-109c-1.975-10.93-14.59-16.16-23.72-9.824L256 65.89L164.1 2.736c-9.125-6.332-21.74-1.107-23.72 9.824L121.6 121.6L12.56 141.3C1.633 143.2-3.596 155.9 2.736 164.1L65.89 256l-63.15 91.01c-6.332 9.125-1.105 21.74 9.824 23.72l109 19.7l19.7 109c1.975 10.93 14.59 16.16 23.72 9.824L256 446.1l91.01 63.15c9.127 6.334 21.75 1.107 23.72-9.822l19.7-109l109-19.7C510.4 368.8 515.6 356.1 509.3 347zM256 383.1c-70.69 0-127.1-57.31-127.1-127.1c0-70.69 57.31-127.1 127.1-127.1s127.1 57.3 127.1 127.1C383.1 326.7 326.7 383.1 256 383.1z"/></svg>
+</span>
+      </div>
+    </button>
+  
+
+  
+</div>
+
+
+
+
+
+
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+    
+    <div class="relative flex flex-col grow">
+      <main id="main-content" class="grow">
+        
+  
+  <article>
+    
+    
+
+    
+    <header id="single_header" class="mt-5 max-w-prose">
+      
+      <h1 class="mt-0 text-4xl font-extrabold text-neutral-900 dark:text-neutral">
+        Classes in AHK
+      </h1>
+      <div class="mt-1 mb-6 text-base text-neutral-500 dark:text-neutral-400 print:hidden">
+        
+
+
+
+
+
+  
+  
+
+
+
+  
+
+  
+  
+  
+    
+  
+
+  
+
+  
+    
+  
+
+  
+
+  
+    
+  
+
+  
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+  <div class="flex flex-row flex-wrap items-center">
+    
+    
+      <time datetime="2026-08-26T18:33:00&#43;05:00">26 August 2026</time><span class="px-2 text-primary-500">&middot;</span><span>1738 words</span><span class="px-2 text-primary-500">&middot;</span><span title="Reading time">9 mins</span>
+    
+
+    
+    
+      <span class="ps-2"><span class="flex cursor-pointer">
+  <span
+    class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
+    Draft
+  </span>
+</span>
+</span>
+    
+  </div>
+
+  
+
+  
+  
+
+  
+  
+
+
+
+      </div>
+      
+        
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+    
+    
+<div class="flex author">
+  
+  <div class="place-self-center">
+    
+    
+    <div class="text-2xl sm:text-lg">
+</div>
+  </div>
+</div>
+
+  
+
+  
+
+  
+    <div class="mb-5"></div>
+  
+
+      
+    </header>
+
+    
+    <section class="flex flex-col max-w-full mt-0 prose dark:prose-invert lg:flex-row">
+      
+      
+      
+      
+      
+
+
+      <div class="min-w-0 min-h-0 max-w-fit">
+        
+
+        <div class="article-content max-w-prose mb-20">
+          
+<h1 class="relative group">AHK Classes
+    <div id="ahk-classes" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#ahk-classes" aria-label="Anchor">#</a>
+    </span>
+    
+</h1>
+<p>Classes in AutoHotkey 2 provide a way to organize variables and functions in your code. They do this by creating new types of structures, known as class objects, that let you store information and functionality in one place.</p>
+
+<h2 class="relative group">What is a Class?
+    <div id="what-is-a-class" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#what-is-a-class" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<p>A class is nothing more than a container that holds variables and functions that are closely associated. This container gives you the ability to look in just one place to make changes. This helps you not repeat yourself and save time scrolling through your code to look for related items.</p>
+<p>A class is a blueprint. It sets out internal variables&ndash;called attributes&ndash;and functions&ndash;called methods&ndash;for the class and the class alone to be able to use. When we use a class in the main part of our script, we create a whole new object based on the class.  This is called an instance, which is based on the blueprint. Just like with the blueprint of a house, which can be used to create many identical houses,  we can make many different instances of our class in our code.</p>
+
+<h3 class="relative group">Example: Inkjet Printer
+    <div id="example-inkjet-printer" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#example-inkjet-printer" aria-label="Anchor">#</a>
+    </span>
+    
+</h3>
+<p>Let&rsquo;s look at a simple example: an inkjet printer. Printers are real objects that use software. They have a variety of attributes and states, such as brand names and models, power (on/off), and ink levels. They perform actions like printing.  You can perform actions on the printer, like turning it on and off, changing the paper size, and unjamming paper.</p>
+<p>To start, we name our printer class using the keyword &lsquo;class&rsquo; and giving the class a name, &lsquo;InkJetPrinter&rsquo;.</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-Javascript" data-lang="Javascript"><span class="line"><span class="cl">	<span class="kr">class</span> <span class="nx">InkJetPrinter</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">	
+</span></span><span class="line"><span class="cl">	<span class="p">}</span></span></span></code></pre></div></div>
+<p>There it is, our new class. But it&rsquo;s empty and won&rsquo;t be very useful as a blueprint if we don&rsquo;t give it more life. Let&rsquo;s give it some attribues (internal variables) so that it is useful. To do this, we need to set the value of these attributes. Let&rsquo;s start like this, which is intuitive:</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-Javascript" data-lang="Javascript"><span class="line"><span class="cl">	<span class="kr">class</span> <span class="nx">InkJetPrinter</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">	    <span class="nx">power</span> <span class="o">:=</span> <span class="s2">&#34;ON&#34;</span>
+</span></span><span class="line"><span class="cl">	    <span class="nx">status</span> <span class="o">:=</span> <span class="s2">&#34;Ready&#34;</span>
+</span></span><span class="line"><span class="cl">	<span class="p">}</span></span></span></code></pre></div></div>
+<p>Once we have these attributes set, we can create an instance. Let&rsquo;s call our printer instance &lsquo;inky.&rsquo; Use the assignment operator, just like any other object, and don&rsquo;t forget the closing parens. After that, we can customize the object with unique attributes:</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl">	<span class="n">inky</span> <span class="o">:=</span> <span class="n">InkJetPrinter</span><span class="p">()</span> 
+</span></span><span class="line"><span class="cl">	<span class="n">inky</span><span class="o">.</span><span class="n">model</span> <span class="o">:=</span> <span class="s2">&#34;HP1000&#34;</span>
+</span></span><span class="line"><span class="cl">	<span class="n">inky</span><span class="o">.</span><span class="n">brand</span> <span class="o">:=</span> <span class="s2">&#34;HP&#34;</span>
+</span></span><span class="line"><span class="cl">	<span class="n">inky</span><span class="o">.</span><span class="n">paper_size</span> <span class="o">:=</span> <span class="s1">&#39;letter&#39;</span></span></span></code></pre></div></div>
+
+<h3 class="relative group">Dot Notation For Attributes
+    <div id="dot-notation-for-attributes" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#dot-notation-for-attributes" aria-label="Anchor">#</a>
+    </span>
+    
+</h3>
+<p>To get to the attribute values that are in the class instance, we use what&rsquo;s called &ldquo;dot notation&rdquo; to &lsquo;drill down&rsquo; into an attribute. It&rsquo;s written in the form <em>object.attribute</em>. We can put our old friend msgbox in front of it to show the value:</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl">	<span class="n">msgbox</span> <span class="n">inky</span><span class="o">.</span><span class="n">power</span>
+</span></span><span class="line"><span class="cl">	<span class="n">msgbox</span> <span class="n">inky</span><span class="o">.</span><span class="n">paper_size</span></span></span></code></pre></div></div>
+<p>And there we go! We get a read out of both values.</p>
+
+<h2 class="relative group">Constructors
+    <div id="constructors" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#constructors" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<p>But hang on! Do we have to define unique attributes one by one with each instance? In fact, there is a special method for AHK classes called &lsquo;__New&rsquo;. It&rsquo;s the constructor method. It takes arguments, allowing you to customize your instance in one line. Here&rsquo;s how works to add brand name, model number, power, paper size, and ink levels, all at once</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="k">class</span> <span class="nc">InkJetPrinter</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">	<span class="n">__New</span><span class="p">(</span><span class="n">brand</span><span class="p">,</span> <span class="n">model</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">	    <span class="n">this</span><span class="o">.</span><span class="n">brand</span> <span class="o">:=</span> <span class="n">brand</span>
+</span></span><span class="line"><span class="cl">	    <span class="n">this</span><span class="o">.</span><span class="n">model</span> <span class="o">:=</span> <span class="n">model</span>
+</span></span><span class="line"><span class="cl">	    <span class="n">this</span><span class="o">.</span><span class="n">power</span> <span class="o">:=</span> <span class="s2">&#34;ON&#34;</span>
+</span></span><span class="line"><span class="cl">	    <span class="n">this</span><span class="o">.</span><span class="n">paper_size</span> <span class="o">:=</span> <span class="s2">&#34;letter&#34;</span>
+</span></span><span class="line"><span class="cl">	    <span class="n">this</span><span class="o">.</span><span class="n">ink_levels</span> <span class="o">:=</span> <span class="n">Map</span><span class="p">(</span><span class="s2">&#34;cyan&#34;</span><span class="p">,</span><span class="mi">100</span><span class="p">,</span><span class="s2">&#34;yellow&#34;</span><span class="p">,</span><span class="mi">100</span><span class="p">,</span><span class="s2">&#34;magenta&#34;</span><span class="p">,</span><span class="mi">100</span><span class="p">,</span><span class="s2">&#34;black&#34;</span><span class="p">,</span><span class="mi">100</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">	<span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span></span></span></code></pre></div></div>
+<p>Let&rsquo;s break down what we did. We added the method &ldquo;__New&rdquo; to the class. The constructor runs every time a new instance is created. When we turn on a physical inkjet printer, certain settings are there by default: that the power is on, that the paper size is set to a certain size—like letter—and what the ink levels are.  When we say:</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl">	<span class="n">this</span><span class="o">.</span><span class="n">power</span> <span class="o">:=</span> <span class="s2">&#34;ON&#34;</span>
+</span></span><span class="line"><span class="cl">	<span class="n">this</span><span class="o">.</span><span class="n">paper_size</span> <span class="o">:=</span> <span class="s2">&#34;letter&#34;</span>
+</span></span><span class="line"><span class="cl">	<span class="n">this</span><span class="o">.</span><span class="n">ink_levels</span> <span class="o">:=</span> <span class="n">Map</span><span class="p">(</span><span class="s2">&#34;cyan&#34;</span><span class="p">,</span><span class="mi">100</span><span class="p">,</span><span class="s2">&#34;yellow&#34;</span><span class="p">,</span><span class="mi">100</span><span class="p">,</span><span class="s2">&#34;magenta&#34;</span><span class="p">,</span><span class="mi">100</span><span class="p">,</span><span class="s2">&#34;black&#34;</span><span class="p">,</span><span class="mi">100</span><span class="p">)</span></span></span></code></pre></div></div>
+<p>…we&rsquo;re doing that for our inkjet printer.</p>
+
+<h2 class="relative group">Constructor Parameters
+    <div id="constructor-parameters" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#constructor-parameters" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<p>Not all printers are alike. There are many different brands and a variety of models. We don&rsquo;t want to create all of our printers alike, so  we can pass in some information for the &ldquo;__New&rdquo; method to use. These constructor parameters allow us to customize things on instantiation. Here&rsquo;s how we do this:</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl">	<span class="n">__New</span><span class="p">(</span><span class="n">brand</span><span class="p">,</span> <span class="n">model</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">	    <span class="n">this</span><span class="o">.</span><span class="n">brand</span> <span class="o">:=</span> <span class="n">brand</span>
+</span></span><span class="line"><span class="cl">	    <span class="n">this</span><span class="o">.</span><span class="n">model</span> <span class="o">:=</span> <span class="n">model</span>
+</span></span><span class="line"><span class="cl">	<span class="o">...</span><span class="p">}</span></span></span></code></pre></div></div>
+
+<h2 class="relative group">What&rsquo;s ‘this&rsquo;?
+    <div id="whats-this" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#whats-this" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<p>You probably noticed that our variable names begin with &ldquo;this.&rdquo; When we create instance variables for our printer, we need to do it in a special way because they belong to the class.  To do this, we use the keyword ‘this&rsquo; to show that they belong to the InkJetPrinter class (this class!) and not another one. These variables are available to the class, but not outside the class unless used along with the instance object.</p>
+<p>At first, this looks puzzling. this.model := model? These names are very similar and can initally be confusing. What is going on here? To clear this up, remember that we need to make these variables available to the whole class. The only variables that the whole class can see must have &ldquo;this&rdquo; before the variable name, otherwise they&rsquo;re local to the method and invisible to the rest of the class. So we&rsquo;re taking the local parameters (brand, model) and putting their information into the &ldquo;this&rdquo; instance variables.</p>
+
+<h2 class="relative group">Methods
+    <div id="methods" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#methods" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<p>The printer now has some instance variables to work with, but it still doesn&rsquo;t do very much.  Let&rsquo;s add some things for it to do, like print some pages for us.</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="k">class</span> <span class="nc">InkJetPrinter</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">	<span class="n">__New</span><span class="p">(</span><span class="n">brand</span><span class="p">,</span> <span class="n">model</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">	    <span class="n">this</span><span class="o">.</span><span class="n">brand</span> <span class="o">:=</span> <span class="n">brand</span>
+</span></span><span class="line"><span class="cl">	    <span class="n">this</span><span class="o">.</span><span class="n">model</span> <span class="o">:=</span> <span class="n">model</span>
+</span></span><span class="line"><span class="cl">	    <span class="n">this</span><span class="o">.</span><span class="n">power</span> <span class="o">:=</span> <span class="s2">&#34;ON&#34;</span>
+</span></span><span class="line"><span class="cl">	    <span class="n">this</span><span class="o">.</span><span class="n">paper_size</span> <span class="o">:=</span> <span class="s2">&#34;letter&#34;</span>
+</span></span><span class="line"><span class="cl">	    <span class="n">this</span><span class="o">.</span><span class="n">color_levels</span> <span class="o">:=</span> <span class="n">Map</span><span class="p">(</span><span class="s2">&#34;cyan&#34;</span><span class="p">,</span><span class="mi">100</span><span class="p">,</span><span class="s2">&#34;yellow&#34;</span><span class="p">,</span><span class="mi">100</span><span class="p">,</span><span class="s2">&#34;magenta&#34;</span><span class="p">,</span><span class="mi">100</span><span class="p">,</span><span class="s2">&#34;black&#34;</span><span class="p">,</span><span class="mi">100</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">	<span class="p">}</span>
+</span></span><span class="line"><span class="cl">	
+</span></span><span class="line"><span class="cl">	<span class="n">Print</span><span class="p">(</span><span class="n">pages</span><span class="p">){</span>
+</span></span><span class="line"><span class="cl">	    <span class="n">msgbox</span> <span class="s2">&#34;Printed &#34;</span> <span class="n">pages</span> <span class="s2">&#34; page(s).&#34;</span>
+</span></span><span class="line"><span class="cl">	<span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span></span></span></code></pre></div></div>
+<p>Excellent! We&rsquo;ve add a new method called Print that takes one argument&ndash;the number of pages&ndash;and returns a message to the user that a certain number of pages were printed. To see how this works in a script, start a new script called printer.ahk. Add the code above.  Then, below that, create a new instance of the printer. We&rsquo;ll keep the name &lsquo;inky&rsquo; from before.</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl">	<span class="p">;</span> <span class="n">OUR</span> <span class="n">MAIN</span> <span class="n">SCRIPT</span>
+</span></span><span class="line"><span class="cl">	<span class="n">inky</span> <span class="o">:=</span> <span class="n">InkJetPrinter</span><span class="p">(</span><span class="s2">&#34;HP&#34;</span><span class="p">,</span><span class="s2">&#34;HP1000&#34;</span><span class="p">)</span></span></span></code></pre></div></div>
+
+<h3 class="relative group">Dot Notation For Method Calls
+    <div id="dot-notation-for-method-calls" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#dot-notation-for-method-calls" aria-label="Anchor">#</a>
+    </span>
+    
+</h3>
+<p>Let&rsquo;s tell it to print 10 pages using the Print method. This is different from a function call that we learned about before, because we call the mathod on an instance. To do this, you name the instance first &lsquo;inky&rsquo;, add a dot &lsquo;.&rsquo; and then name the method and any parameters: &lsquo;Print(10)&rsquo;</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl">	<span class="n">inky</span><span class="o">.</span><span class="n">Print</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span></span></span></code></pre></div></div>
+<p>You should then see a message box with: &ldquo;Printed 10 page(s).&rdquo; We just created an instance in just one line and got it to print!</p>
+
+<h2 class="relative group">Methods Can Use And Change Instance Variables
+    <div id="methods-can-use-and-change-instance-variables" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#methods-can-use-and-change-instance-variables" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<p>Excellent! We just printed 10 pages! However, all that printing likely used up some ink.  Let&rsquo;s make sure that&rsquo;s captured in the Print method. We can do that very easily by adding a couple of lines to the Print method&rsquo;s code. To make it simple, let&rsquo;s say that every page uses up one unit of ink of each color (yes, that&rsquo;s a lot of ink!). We can write:</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl">	<span class="n">Print</span><span class="p">(</span><span class="n">pages</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">	    <span class="k">for</span> <span class="n">color</span><span class="p">,</span> <span class="n">level</span> <span class="ow">in</span> <span class="n">this</span><span class="o">.</span><span class="n">color_levels</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">	        <span class="n">this</span><span class="o">.</span><span class="n">color_levels</span><span class="p">[</span><span class="n">color</span><span class="p">]</span> <span class="o">-=</span> <span class="p">(</span><span class="n">pages</span> <span class="o">*</span> <span class="mi">1</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">	    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">	    <span class="n">msgbox</span> <span class="s2">&#34;Printed &#34;</span> <span class="n">pages</span> <span class="s2">&#34; page(s).&#34;</span>
+</span></span><span class="line"><span class="cl">	<span class="p">}</span></span></span></code></pre></div></div>
+<p>(You&rsquo;ll remember our for-loop structure and how we iterate over map objects from previous chapters.)</p>
+<p>Let&rsquo;s check the ink level directly in our code. For example, let&rsquo;s look at the Cyan level.</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl">	<span class="p">;</span> <span class="n">OUR</span> <span class="n">MAIN</span> <span class="n">SCRIPT</span>
+</span></span><span class="line"><span class="cl">	<span class="n">inky</span> <span class="o">:=</span> <span class="n">InkJetPrinter</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">	<span class="n">inky</span><span class="o">.</span><span class="n">Print</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">	<span class="n">msgbox</span> <span class="n">inky</span><span class="o">.</span><span class="n">color_levels</span><span class="p">[</span><span class="s2">&#34;Cyan&#34;</span><span class="p">]</span> <span class="p">;</span> <span class="o">=&gt;</span> <span class="mi">90</span></span></span></code></pre></div></div>
+
+<h2 class="relative group">Keeping Track Of The Printer&rsquo;s State
+    <div id="keeping-track-of-the-printers-state" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#keeping-track-of-the-printers-state" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<p>One of the more powerful things about classes is that they allow us to keep track of our class objects in an elegant, self-contained way.  We can check things about it&ndash;its state&ndash;easily, and change it quickly.  For example, let&rsquo;s write a new method called ShowInkLevels so that we can see everything at once and not have to do it manually each time:</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl">	<span class="n">ShowInkLevels</span><span class="p">()</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">	    <span class="n">result</span> <span class="o">:=</span> <span class="s2">&#34;CURRENT LEVELS:`n&#34;</span>
+</span></span><span class="line"><span class="cl">	    <span class="k">for</span> <span class="n">color</span><span class="p">,</span> <span class="n">level</span> <span class="ow">in</span> <span class="n">this</span><span class="o">.</span><span class="n">color_levels</span><span class="p">{</span>
+</span></span><span class="line"><span class="cl">	        <span class="n">result</span> <span class="o">.=</span> <span class="n">color</span> <span class="s2">&#34; -&gt; &#34;</span> <span class="n">level</span> <span class="s2">&#34;`n&#34;</span>
+</span></span><span class="line"><span class="cl">	    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">	    <span class="n">msgbox</span> <span class="n">result</span>
+</span></span><span class="line"><span class="cl">	<span class="p">}</span>
+</span></span><span class="line"><span class="cl">	
+</span></span><span class="line"><span class="cl">	<span class="p">;</span> <span class="n">OUR</span> <span class="n">MAIN</span> <span class="n">SCRIPT</span>
+</span></span><span class="line"><span class="cl">	<span class="n">inky</span> <span class="o">:=</span> <span class="n">InkJetPrinter</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">	<span class="n">inky</span><span class="o">.</span><span class="n">Print</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">	<span class="n">inky</span><span class="o">.</span><span class="n">ShowInkLevels</span><span class="p">()</span> <span class="p">;</span> <span class="o">=&gt;</span> <span class="n">msgbox</span><span class="p">,</span> <span class="mi">90</span> <span class="k">for</span> <span class="nb">all</span> <span class="n">levels</span></span></span></code></pre></div></div>
+<p>We can check any of the instance variables with this approach. The last thing we will do is to add an About method that informs the user of the current overall state of the printer.</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl">	<span class="n">About</span><span class="p">()</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">	    <span class="n">current_state</span> <span class="o">:=</span> <span class="n">this</span><span class="o">.</span><span class="n">brand</span> <span class="s2">&#34;/&#34;</span> <span class="n">this</span><span class="o">.</span><span class="n">model</span> <span class="s2">&#34;`nPower: &#34;</span> <span class="n">this</span><span class="o">.</span><span class="n">power</span> <span class="s2">&#34;`nPaper Size: &#34;</span> <span class="n">this</span><span class="o">.</span><span class="n">paper_size</span>
+</span></span><span class="line"><span class="cl">	    <span class="n">msgbox</span> <span class="n">current_state</span> 
+</span></span><span class="line"><span class="cl">	<span class="p">}</span></span></span></code></pre></div></div>
+
+<h2 class="relative group">Calling Other Instance Methods Within The Class
+    <div id="calling-other-instance-methods-within-the-class" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#calling-other-instance-methods-within-the-class" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<p>Finally, let&rsquo;s consider what happens if our ink levels get too low in the printer. The printer should probably warn the user by checking the ink level after every print and sending a message if the level on any one ink tank is below 10. To do that, we can adapt our method&ndash;ShowInkLevels&ndash;to the new context.  We want to preserve the ability to call it at any time, but also provide a special warning if the ink is low.</p>
+<p>Let&rsquo;s add a sentinel to our Print statement, warn_low_ink, and set it to false. Because we&rsquo;re already looping through the color_levels map, we can check after every use with:</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl">	<span class="k">if</span> <span class="n">this</span><span class="o">.</span><span class="n">color_levels</span><span class="p">[</span><span class="n">color</span><span class="p">]</span> <span class="o">&lt;</span> <span class="mi">10</span>
+</span></span><span class="line"><span class="cl">		<span class="n">warn_low_ink</span> <span class="o">:=</span> <span class="n">true</span></span></span></code></pre></div></div>
+<p>Then we need to add in our method, ShowInkLevels.  Because it&rsquo;s being used inside the class, we need to use the &ldquo;this.&rdquo; keyword so it will work properly.</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl">	<span class="k">if</span> <span class="n">warn_low_ink</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">	    <span class="n">msgbox</span> <span class="s2">&#34;INK LEVELS LOW&#34;</span>
+</span></span><span class="line"><span class="cl">	    <span class="n">this</span><span class="o">.</span><span class="n">ShowInkLevels</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">	<span class="p">}</span></span></span></code></pre></div></div>
+
+<h3 class="relative group">Try It Yourself
+    <div id="try-it-yourself" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#try-it-yourself" aria-label="Anchor">#</a>
+    </span>
+    
+</h3>
+<p>Now it&rsquo;s your turn to do a few exercises to solidify your knowledge.  See if you can do these three challenges to expand the InkJetPrinter class.</p>
+<ol>
+<li>Implement a toggle method to toggle the printer off and on.  Remember to change the status of the printer to &ldquo;OFF&rdquo; as well.</li>
+<li>Implement a method to change the paper size.</li>
+<li>For fun, add a random element to Print to make the printer jam.  Then, write a method to unjam the printer called FixMyPrinter.</li>
+<li>The warning for the low ink when printing could be better.  Add to the existing methods and (a) combine the LOW INK WARNING with the ink levels message and (b) make sure to tell the user specifically which ink level is low.</li>
+</ol>
+
+<h2 class="relative group">Summary
+    <div id="summary" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#summary" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<p>In this chapter, we talked about classes being an excellent tool for keeping your code organized. We defined what they were, and built one called InkJetPrinter. We used AHK&rsquo;s built-in constructor method, __New(), to set the printer up, and added a few constructor parameters with the new keyword, &ldquo;this.&rdquo; to to set everything up.  Then, we built three methods: Print, About, and CheckInkLevels, to add functionality to the printer, and learned how to use one method inside another one.</p>
+
+          
+          
+          
+        </div>
+        
+        
+
+        
+
+        
+
+      </div>
+
+      
+      
+        
+        
+          
+          
+        
+        
+        
+        <script
+          type="text/javascript"
+          src="/js/page.min.54b6f4371722649edbe871e431d8670d670878c22be8f36e229fe53cc9b786fe25a834def5e6de621f7a3e37b72bc8cd73839aa5ed907ed6cbd45cd3e1b0fa20.js"
+          integrity="sha512-VLb0NxciZJ7b6HHkMdhnDWcIeMIr6PNuIp/lPMm3hv4lqDTe9ebeYh96Pje3K8jNc4Oape2QftbL1FzT4bD6IA=="
+          data-oid="views_posts/ahk-classes.md"
+          data-oid-likes="likes_posts/ahk-classes.md"></script>
+      
+    </section>
+
+    
+    <footer class="pt-8 max-w-prose print:hidden">
+      
+  
+    
+    
+    
+    <div class="pt-8">
+      <hr class="border-dotted border-neutral-300 dark:border-neutral-600">
+      <div class="flex justify-between pt-3">
+        <span class="flex flex-col">
+          
+            <a
+              class="flex text-neutral-700 hover:text-primary-600 dark:text-neutral dark:hover:text-primary-400"
+              href="/posts/hello-world/">
+              <span class="leading-6">
+                <span class="inline-block rtl:rotate-180">&larr;</span>&ensp;Hello World
+              </span>
+            </a>
+            
+              <span class="ms-6 mt-1 text-xs text-neutral-500 dark:text-neutral-400">
+                <time datetime="2026-08-26T11:42:04&#43;05:00">26 August 2026</time>
+              </span>
+            
+          
+        </span>
+        <span class="flex flex-col items-end">
+          
+        </span>
+      </div>
+    </div>
+  
+
+
+      
+    </footer>
+  </article>
+
+        
+
+
+  
+
+
+
+
+
+
+<div
+  id="scroll-to-top"
+  class="fixed bottom-6 end-6 z-50 transform translate-y-4 opacity-0 duration-200">
+  <a
+    href="#the-top"
+    class="pointer-events-auto flex h-12 w-12 items-center justify-center rounded-full bg-neutral/50 text-xl text-neutral-700 hover:text-primary-600 dark:bg-neutral-800/50 dark:text-neutral dark:hover:text-primary-400"
+    aria-label="Scroll to top"
+    title="Scroll to top">
+    &uarr;
+  </a>
+</div>
+
+      </main><footer id="site-footer" class="py-10 print:hidden">
+  
+  
+    
+  
+  <div class="flex items-center justify-between">
+    
+    
+      <p class="text-sm text-neutral-500 dark:text-neutral-400">
+          &copy;
+          2026
+          
+      </p>
+    
+
+    
+    
+      <p class="text-xs text-neutral-500 dark:text-neutral-400">
+        
+        
+        Powered by <a class="hover:underline hover:decoration-primary-400 hover:text-primary-500"
+          href="https://gohugo.io/" target="_blank" rel="noopener noreferrer">Hugo</a> &amp; <a class="hover:underline hover:decoration-primary-400 hover:text-primary-500"
+          href="https://blowfish.page/" target="_blank" rel="noopener noreferrer">Blowfish</a>
+      </p>
+    
+  </div>
+  
+    <script>
+      mediumZoom(document.querySelectorAll("img:not(.nozoom)"), {
+        margin: 24,
+        background: "rgba(0,0,0,0.5)",
+        scrollOffset: 0,
+      });
+    </script>
+  
+  
+  
+  <script
+    type="text/javascript"
+    src="/js/process.min.ee03488f19c93c2efb199e2e3014ea5f3cb2ce7d45154adb3399a158cac27ca52831db249ede5bb602700ef87eb02434139de0858af1818ab0fb4182472204a4.js"
+    integrity="sha512-7gNIjxnJPC77GZ4uMBTqXzyyzn1FFUrbM5mhWMrCfKUoMdsknt5btgJwDvh&#43;sCQ0E53ghYrxgYqw&#43;0GCRyIEpA=="></script>
+  
+  
+</footer>
+<div
+  id="search-wrapper"
+  class="invisible fixed inset-0 flex h-screen w-screen cursor-default flex-col bg-neutral-500/50 p-4 backdrop-blur-sm dark:bg-neutral-900/50 sm:p-6 md:p-[10vh] lg:p-[12vh] z-500"
+  data-url="//localhost:1313/">
+  <div
+    id="search-modal"
+    class="flex flex-col w-full max-w-3xl min-h-0 mx-auto border rounded-md shadow-lg top-20 border-neutral-200 bg-neutral dark:border-neutral-700 dark:bg-neutral-800">
+    <header class="relative z-10 flex items-center justify-between flex-none px-2">
+      <form class="flex items-center flex-auto min-w-0">
+        <div class="flex items-center justify-center w-8 h-8 text-neutral-400">
+          <span class="relative block icon"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="search" class="svg-inline--fa fa-search fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"/></svg>
+</span>
+        </div>
+        <input
+          type="search"
+          id="search-query"
+          class="flex flex-auto h-12 mx-1 bg-transparent appearance-none focus:outline-dotted focus:outline-2 focus:outline-transparent"
+          placeholder="Search"
+          tabindex="0">
+      </form>
+      <button
+        id="close-search-button"
+        class="flex items-center justify-center w-8 h-8 text-neutral-700 hover:text-primary-600 dark:text-neutral dark:hover:text-primary-400"
+        title="Close (Esc)">
+        <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path fill="currentColor" d="M310.6 361.4c12.5 12.5 12.5 32.75 0 45.25C304.4 412.9 296.2 416 288 416s-16.38-3.125-22.62-9.375L160 301.3L54.63 406.6C48.38 412.9 40.19 416 32 416S15.63 412.9 9.375 406.6c-12.5-12.5-12.5-32.75 0-45.25l105.4-105.4L9.375 150.6c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L160 210.8l105.4-105.4c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-105.4 105.4L310.6 361.4z"/></svg>
+</span>
+      </button>
+    </header>
+    <section class="flex-auto px-2 overflow-auto">
+      <ul id="search-results">
+        
+      </ul>
+    </section>
+  </div>
+</div>
+
+    </div>
+  </body>
+  
+</html>

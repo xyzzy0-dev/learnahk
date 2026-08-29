@@ -9,12 +9,22 @@
     <managingEditor>xyzzy0@protonmail.com</managingEditor>
     <webMaster>xyzzy0@protonmail.com</webMaster>
     <copyright>© 2026 </copyright>
-    <lastBuildDate>Mon, 19 Jan 2026 11:42:04 +0500</lastBuildDate><atom:link href="//localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 26 Aug 2026 18:33:00 +0500</lastBuildDate><atom:link href="//localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Classes in AHK</title>
+      <link>//localhost:1313/posts/ahk-classes/</link>
+      <pubDate>Wed, 26 Aug 2026 18:33:00 +0500</pubDate>
+      <author>xyzzy0@protonmail.com</author>
+      <guid>//localhost:1313/posts/ahk-classes/</guid>
+      <description></description>
+      
+    </item>
     
     <item>
       <title>Hello World</title>
       <link>//localhost:1313/posts/hello-world/</link>
-      <pubDate>Mon, 19 Jan 2026 11:42:04 +0500</pubDate>
+      <pubDate>Wed, 26 Aug 2026 11:42:04 +0500</pubDate>
       <author>xyzzy0@protonmail.com</author>
       <guid>//localhost:1313/posts/hello-world/</guid>
       <description></description>
@@ -24,9 +34,19 @@
     <item>
       <title>A code snippet</title>
       <link>//localhost:1313/posts/a-code-snippet/</link>
-      <pubDate>Mon, 19 Jan 2026 11:09:18 +0500</pubDate>
+      <pubDate>Wed, 26 Aug 2026 11:09:18 +0500</pubDate>
       <author>xyzzy0@protonmail.com</author>
       <guid>//localhost:1313/posts/a-code-snippet/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>First Post</title>
+      <link>//localhost:1313/posts/first-post/</link>
+      <pubDate>Wed, 26 Aug 2026 11:09:18 +0500</pubDate>
+      <author>xyzzy0@protonmail.com</author>
+      <guid>//localhost:1313/posts/first-post/</guid>
       <description></description>
       
     </item>

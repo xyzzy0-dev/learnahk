@@ -7,11 +7,11 @@ title = 'A code snippet'
 This is just the text. This is just the text. This is just the text. This is just the text. This is just the text. This is just the text. This is just the text. This is just the text. This is just the text. This is just the text. This is just the text. 
 
 ```text
-	PrintArray(){
-		for i, x in y {
-			s .= x "`n"
-		}
-		Msgbox(s)
+PrintArray(y){
+	for i, x in y {
+		s .= x "`n"
 	}
+	Msgbox(s)
+}
 ```
 And then there was more text after that and then there was even more and more and more until we got to the end of a line. 
